@@ -6,6 +6,9 @@ class Purchase < ApplicationRecord
   # Methods
 
   # Validations
+  validates :name, presence: true
+  validates :amount, presence: true
+  validates :categories, presence: true
 
   # Callbacks
 end
