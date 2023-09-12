@@ -20,19 +20,30 @@ class PurchasesController < ApplicationController
   end
 
   # GET /purchases/1/edit
-  def edit; end
+  def edit
+    @attributes = []
+    @attributes << @purchase
+    @categories = current_user.categories
+    @attributes << @categories
+  end
 
   # POST /purchases or /purchases.json
   def create
+    @attributes = []
     @purchase = Purchase.new(purchase_params)
     @purchase.author = current_user
     category_id = params[:purchase][:category_id]
-    category = Category.find(category_id)
-    @purchase.categories << category
+    if category_id.present?
+      category = Category.find(category_id)
+      @purchase.categories << category
+    end
+    @attributes << @purchase
+    @categories = current_user.categories
+    @attributes << @categories
 
     respond_to do |format|
       if @purchase.save
-        format.html { redirect_to purchase_url(@purchase), notice: 'Purchase was successfully created.' }
+        format.html { redirect_to category_url(@purchase.categories[0]), notice: 'Purchase was successfully created.' }
         format.json { render :show, status: :created, location: @purchase }
       else
         format.html { render :new, status: :unprocessable_entity }
