@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'static_pages#splash'
   resources :purchases
   resources :categories
   devise_for :users
