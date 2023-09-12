@@ -5,7 +5,7 @@
   <%= render "purchases/purchase", purchase: purchase %>
 <% end %>
 
-<%= link_to "Add a new transaction", new_purchase_path %>
+<%= link_to "Add a new transaction", new_category_purchase_path(@category) %>
 
 <div>
   <%= link_to "Edit this category", edit_category_path(@category) %> |
