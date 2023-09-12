@@ -5,4 +5,13 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name])
   end
+
+  def after_sign_in_path_for(resource)
+    if resource.is_a?(User)
+      # Customize the redirection path for the User model
+      categories_path 
+    else
+      super # Use Devise's default behavior for other resources
+    end
+  end
 end
