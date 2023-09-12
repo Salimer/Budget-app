@@ -1,0 +1,19 @@
+<div id="<%= dom_id purchase %>">
+  <p>
+    <strong>Name:</strong>
+    <%= purchase.name %>
+  </p>
+
+  <p>
+    <strong>Category:</strong>
+    <% purchase.categories.each do |category| %>
+      <%= category.name %>
+      <% end %>
+  </p>
+
+  <p>
+    <strong>Amount:</strong>
+    <%= purchase.amount %>
+  </p>
+
+</div>
