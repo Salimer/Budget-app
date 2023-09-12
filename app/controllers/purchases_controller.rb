@@ -1,4 +1,5 @@
 class PurchasesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_purchase, only: %i[show edit update destroy]
 
   # GET /purchases or /purchases.json
