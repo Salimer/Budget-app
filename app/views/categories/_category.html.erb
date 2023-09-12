@@ -9,4 +9,8 @@
     <%= category.icon %>
   </p>
 
+  <p>
+    <strong>Total amount of Purchases:</strong>
+    <%= category.purchases.sum(:amount) %>
+  </p>
 </div>
