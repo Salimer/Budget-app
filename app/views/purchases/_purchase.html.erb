@@ -1,18 +1,15 @@
-<div id="<%= dom_id purchase %>" class="drop-shadow-md bg-white flex w-full p-3 rounded">
+<div id="<%= dom_id purchase %>" class="drop-shadow-md bg-white flex w-full p-3 rounded justify-between">
+<div>
   <p>
-    <strong>Name:</strong>
-    <%= purchase.name %>
+    <strong><%= purchase.name %></strong>
   </p>
 
-  <p>
-    <strong>Category:</strong>
-    <% purchase.categories.each do |category| %>
-      <%= category.name %>
-      <% end %>
+  <p class="date-color text-xs">
+    <span><%= purchase.created_at.strftime('%d %b %Y') %></span>
   </p>
-
+</div>
+  
   <p class="amount-color">
-    <strong>Amount:</strong>
     $<%= purchase.amount %>
   </p>
 
