@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     if resource.is_a?(User)
       # Customize the redirection path for the User model
-      categories_path 
+      categories_path
     else
       super # Use Devise's default behavior for other resources
     end
