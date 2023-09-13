@@ -1,15 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @category %>
-<% @purchases.each do |purchase| %>
-  <%= render "purchases/purchase", purchase: purchase %>
-<% end %>
+<div id="purchases">
+  <% @purchases.each do |purchase| %>
+    <a href="<%= category_purchase_path(@category, purchase) %>" class="m-1">
+    <%= render "purchases/purchase", purchase: purchase %>
+    </a>
+  <% end %>
+</div>
+<div class="flex justify-between">
+<a href="<%= new_category_purchase_path(@category) %>" class="">
+<button class="p-2 green-btn rounded drop-shadow-md">New +</button>
+</a>
 
-<%= link_to "Add a new transaction", new_category_purchase_path(@category) %>
+<%= button_to "Delete category", @category, method: :delete, class: "red-btn rounded drop-shadow-md p-2" %>
+
+</div>
+
 
 <div>
   <%= link_to "Edit this category", edit_category_path(@category) %> |
   <%= link_to "Back to categories", categories_path %>
 
-  <%= button_to "Destroy this category", @category, method: :delete %>
 </div>
