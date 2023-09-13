@@ -1,16 +1,20 @@
-<div id="<%= dom_id category %>">
-  <p>
-    <strong>Name:</strong>
-    <%= category.name %>
-  </p>
-
+<div id="<%= dom_id category %>" class="drop-shadow-md bg-white flex w-full p-3 rounded">
   <p>
     <strong>Icon:</strong>
     <%= category.icon %>
   </p>
-
-  <p>
-    <strong>Total amount of Purchases:</strong>
-    <%= category.purchases.sum(:amount) %>
-  </p>
+  <div class="w-full flex flex-col justify-between">
+    <div class="flex justify-between border-b-1">
+    <p class="item-title-color">
+      <strong><%= category.name %></strong>
+    </p>
+    <p class="self-center amount-color">
+      <strong>$<%= category.purchases.sum(:amount) %></strong>
+    </p>
+    </div>
+    
+    <p class="date-color text-xs">
+    <span><%= category.created_at.strftime('%d %b %Y') %></span>
+    </p>
+  </div>
 </div>
