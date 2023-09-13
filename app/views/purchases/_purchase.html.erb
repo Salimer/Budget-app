@@ -1,4 +1,4 @@
-<div id="<%= dom_id purchase %>">
+<div id="<%= dom_id purchase %>" class="drop-shadow-md bg-white flex w-full p-3 rounded">
   <p>
     <strong>Name:</strong>
     <%= purchase.name %>
@@ -11,9 +11,9 @@
       <% end %>
   </p>
 
-  <p>
+  <p class="amount-color">
     <strong>Amount:</strong>
-    <%= purchase.amount %>
+    $<%= purchase.amount %>
   </p>
 
 </div>
