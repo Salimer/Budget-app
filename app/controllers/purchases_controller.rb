@@ -70,7 +70,7 @@ class PurchasesController < ApplicationController
     @purchase.destroy
 
     respond_to do |format|
-      format.html { redirect_to purchases_url, notice: 'Purchase was successfully destroyed.' }
+      format.html { redirect_to categories_url, notice: 'Purchase was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
