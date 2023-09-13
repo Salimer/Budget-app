@@ -4,11 +4,11 @@
 
 <div id="categories">
   <% @categories.each do |category| %>
+    <a href="<%= category_path(category) %>" class="m-1">
     <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
+    </a>
   <% end %>
 </div>
-
-<%= link_to "New category", new_category_path %>
+<a href="<%= new_category_path %>" class="">
+<button class="p-2 green-btn rounded drop-shadow-md">New +</button>
+</a>
