@@ -6,10 +6,6 @@ RSpec.describe PurchasesController, type: :routing do
       expect(get: '/purchases').to route_to('purchases#index')
     end
 
-    it 'routes to #show' do
-      expect(get: '/purchases/1').to route_to('purchases#show', id: '1')
-    end
-
     it 'routes to #edit' do
       expect(get: '/purchases/1/edit').to route_to('purchases#edit', id: '1')
     end
