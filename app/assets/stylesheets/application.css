@@ -49,3 +49,28 @@
     background-color: #d07438;
     color: #fff;
  }
+
+ .blue {
+    color: #3778c2;
+ }
+
+ .blue-btn {
+    background-color: #3778c2;
+    color: #fff;
+ }
+
+ @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1); /* Adjust the scale factor as needed */
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .animate-scale {
+    animation: scale 2s infinite; /* Adjust the duration and animation iteration as needed */
+  }
