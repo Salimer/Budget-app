@@ -19,7 +19,6 @@
   src: url('/assets/Proxima Nova Font.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
-  src: ("app/assets/fonts/proxima-nova-font.ttf");
 }
 
 body {
@@ -84,4 +83,8 @@ body {
 
 .animate-scale {
   animation: scale 2s infinite; /* Adjust the duration and animation iteration as needed */
+}
+
+.width-salim {
+  width: 80%;
 }
