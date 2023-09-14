@@ -31,6 +31,8 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Devise::Test::IntegrationHelpers, type: :feature
+  config.include Devise::Test::IntegrationHelpers, type: :view
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{Rails.root}/spec/fixtures"
 
@@ -61,4 +63,10 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.include Capybara::DSL, type: :feature
+
+  # Configure Capybara
+  Capybara.default_driver = :selenium_chrome # Set your preferred driver here
+  Capybara.javascript_driver = :selenium_chrome # If you want JavaScript-enabled tests
+  Capybara.default_max_wait_time = 5 # Adjust as needed
 end
