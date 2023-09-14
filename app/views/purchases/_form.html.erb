@@ -1,4 +1,4 @@
-<%= form_with(model: attributes[0], local: true) do |form| %>
+<%= form_with(model: attributes[0], local: true, class: 'mt-10 flex flex-col gap-5 ms-4') do |form| %>
   <% if attributes[0].errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(attributes[0].errors.count, "error") %> prohibited this purchase from being saved:</h2>
@@ -17,16 +17,16 @@
   </div>
 
   <div>
-    <%= form.label :category, style: "display: block" %>
-    <%= form.collection_select :category_id, attributes[1], :id, :name, { prompt: 'Choose category...' }%>
-  </div>
-
-  <div>
     <%= form.label :amount, style: "display: block" %>
     <%= form.text_field :amount %>
   </div>
 
   <div>
-    <%= form.submit "Save" %>
+    <%= form.label :category, style: "display: block", class: 'invisible' %>
+    <%= form.collection_select :category_id, attributes[1], :id, :name, { prompt: 'Choose category.....' }%>
+  </div>
+
+  <div>
+    <%= form.submit "Save", class: 'p-3 px-5 green-btn rounded hover:bg-green-600' %>
   </div>
 <% end %>
