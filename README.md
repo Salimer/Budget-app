@@ -13,6 +13,8 @@
   <br/>
 <h1 align="center">Budget Monitor</h1>
 
+<img width="374" alt="erd_diagram" src="https://github.com/Salimer/Budget-app/assets/52242629/83b71cc6-3f17-4916-add6-630c948f7078">
+
 
 </div>
 
