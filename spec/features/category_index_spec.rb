@@ -5,6 +5,7 @@ RSpec.feature 'Category Index Page', type: :feature, js: true do
   let!(:category1) { FactoryBot.create(:category) }
   let!(:category2) { FactoryBot.create(:category) }
   before do
+    user.categories << [category1, category2]
     login_as(user, scope: :user)
   end
 
