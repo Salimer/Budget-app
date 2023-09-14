@@ -1,9 +1,18 @@
 <a name="readme-top"></a>
 
 <div align="center">
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
+  <h1><b>Welcome to my project 😃</b></h1>
 
-<h3><b>Budget app</b></h3>
+</div>
+
+<div align="center">
+  
+  <br/>
+<h1 align="center">Budget Monitor</h1>
+
 
 </div>
 
