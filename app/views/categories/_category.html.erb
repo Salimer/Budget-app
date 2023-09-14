@@ -1,4 +1,4 @@
-<div id="<%= dom_id category %>" class="drop-shadow-md bg-white flex w-full p-3 rounded">
+<div id="<%= dom_id category %>" class="category-item drop-shadow-md bg-white flex w-full p-3 rounded">
   <p>
     <strong>Icon:</strong>
     <%= category.icon %>
@@ -9,7 +9,7 @@
       <strong><%= category.name %></strong>
     </p>
     <p class="self-center amount-color">
-      <strong>$<%= category.purchases.sum(:amount) %></strong>
+      <strong>Total: $<%= category.purchases.sum(:amount) %></strong>
     </p>
     </div>
     
