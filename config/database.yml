@@ -82,3 +82,6 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
+  database: microverse355173
+  username: microverse355173
+  password: jtRgJYrPum72hc8QvJ1GQRI3qlxjDJQy
