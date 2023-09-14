@@ -14,63 +14,74 @@
  *= require_self
  */
 
- body {
-    background-color:#eff2f1;
- }
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/assets/Proxima Nova Font.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  src: ("app/assets/fonts/proxima-nova-font.ttf");
+}
 
- .item-title-color {
-    color: #ababab;
- }
+body {
+  background-color: #eff2f1;
+  font-family: 'Proxima Nova', sans-serif;
+}
 
- .amount-color {
-    color: #373e48;
- }
+.item-title-color {
+  color: #ababab;
+}
 
- .date-color {
-    color: #bababd;
- }
+.amount-color {
+  color: #373e48;
+}
 
- .green-btn {
-    background-color: #60b524;
-    color: #fff;
- }
+.date-color {
+  color: #bababd;
+}
 
- .red-btn {
-    background-color: #b84041;
-    color: #fff;
- }
+.green-btn {
+  background-color: #60b524;
+  color: #fff;
+}
 
- .blue-nav-white-text {
-    background-color: #3778c2;
-    color: #fff;
- }
+.red-btn {
+  background-color: #b84041;
+  color: #fff;
+}
 
- .orange-btn {
-    background-color: #d07438;
-    color: #fff;
- }
+.blue-nav-white-text {
+  background-color: #3778c2;
+  color: #fff;
+}
 
- .blue {
-    color: #3778c2;
- }
+.orange-btn {
+  background-color: #d07438;
+  color: #fff;
+}
 
- .blue-btn {
-    background-color: #3778c2;
-    color: #fff;
- }
+.blue {
+  color: #3778c2;
+}
 
- @keyframes scale {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1); /* Adjust the scale factor as needed */
-    }
-    100% {
-      transform: scale(1);
-    }
+.blue-btn {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
   }
 
-  .animate-scale {
-    animation: scale 2s infinite; /* Adjust the duration and animation iteration as needed */
+  50% {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
   }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-scale {
+  animation: scale 2s infinite; /* Adjust the duration and animation iteration as needed */
+}
