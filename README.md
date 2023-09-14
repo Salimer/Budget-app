@@ -80,7 +80,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://budget-app-t49c.onrender.com/)
 - [Video presentation](https://www.loom.com/share/Budget-Monitor-App-Overview-d69c4dbe85bc4fd8a4e89216c0f08851?sid=60fdaf45-8452-4bde-836f-d1125bc6ca24)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
