@@ -22,7 +22,7 @@ RSpec.describe '/purchases', type: :request do
 
     it 'the response body includes correct placeholder text' do
       get category_path(@category)
-      expect(response.body).to include('Amount')
+      expect(response.body).to include('New purchase')
     end
   end
 end
