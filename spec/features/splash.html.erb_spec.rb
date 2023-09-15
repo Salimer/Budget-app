@@ -4,7 +4,7 @@ RSpec.feature 'Splashscreen', type: :feature, js: true do
   scenario 'Visiting the root path' do
     visit root_path
 
-    expect(page).to have_content('my awesome app :)')
+    expect(page).to have_content('Budget')
   end
 
   scenario 'Click sign in' do

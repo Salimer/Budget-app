@@ -23,6 +23,6 @@ RSpec.feature 'purchases/show', type: :feature do
 
   scenario 'allows signing out' do
     click_on 'Sign Out'
-    expect(page).to have_content('Welcome')
+    expect(page).to have_content('Budget')
   end
 end

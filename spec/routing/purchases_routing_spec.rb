@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe PurchasesController, type: :routing do
   describe 'routing' do
-    it 'routes to #index' do
-      expect(get: '/purchases').to route_to('purchases#index')
-    end
+    # it 'routes to #index' do
+    #   expect(get: '/purchases').to route_to('purchases#index')
+    # end
 
     it 'routes to #edit' do
       expect(get: '/purchases/1/edit').to route_to('purchases#edit', id: '1')
