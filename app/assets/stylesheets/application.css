@@ -67,6 +67,11 @@ body {
   color: #fff;
 }
 
+.grey-btn {
+  background-color: #eff2f1;
+  color: #7f838a;
+}
+
 @keyframes scale {
   0% {
     transform: scale(1);
