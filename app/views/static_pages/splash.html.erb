@@ -1,5 +1,5 @@
 <div class="flex flex-col justify-between h-screen items-center">
-  <p class="text-center p-3 blue-btn w-full invisible">Welcome!</br>to my awesome app :)</p>
+  <p class="text-center p-3 blue-btn w-full">Welcome!</br>to my awesome app :)</p>
   <h1 class="text-4xl font-extrabold blue animate-scale">
     Budget Monitor
   </h1>
@@ -11,12 +11,12 @@
         </a>
       </div>
     <% else %>
-      <div class="flex flex-col items-center ">
-        <a href="/users/sign_in" class="w-10/12">
-          <button class="blue-btn w-full p-4 rounded">Sign in</button>
+      <div class="flex">
+        <a href="/users/sign_in" class="w-1/2">
+          <button class="blue-btn w-full p-4 border-e-2">Sign in</button>
         </a>
         <a href="/users/sign_up" class="w-1/2">
-          <button class="grey-btn w-full p-4">Sign up</button>
+          <button class="blue-btn w-full p-4 border-s-2">Sign up</button>
         </a>
       </div>
     <% end %>
