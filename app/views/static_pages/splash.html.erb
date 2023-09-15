@@ -1,0 +1,24 @@
+<div class="flex flex-col justify-between h-screen items-center">
+  <p class="text-center p-3 blue-btn w-full">Welcome!</br>to my awesome app :)</p>
+  <h1 class="text-4xl font-extrabold blue animate-scale">
+    Budget Monitor
+  </h1>
+  <div class="w-full">
+    <% if user_signed_in? %>
+      <div>
+        <a href="<%= categories_path %>" class="w-full">
+          <button class="blue-btn w-full p-4">Start Monitoring!</button>
+        </a>
+      </div>
+    <% else %>
+      <div class="flex">
+        <a href="/users/sign_in" class="w-1/2">
+          <button class="blue-btn w-full p-4 border-e-2">Sign in</button>
+        </a>
+        <a href="/users/sign_up" class="w-1/2">
+          <button class="blue-btn w-full p-4 border-s-2">Sign up</button>
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>

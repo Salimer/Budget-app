@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/assets/Proxima Nova Font.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #eff2f1;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.item-title-color {
+  color: #ababab;
+}
+
+.amount-color {
+  color: #373e48;
+}
+
+.date-color {
+  color: #bababd;
+}
+
+.green-btn {
+  background-color: #60b524;
+  color: #fff;
+}
+
+.red-btn {
+  background-color: #b84041;
+  color: #fff;
+}
+
+.blue-nav-white-text {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.orange-btn {
+  background-color: #d07438;
+  color: #fff;
+}
+
+.blue {
+  color: #3778c2;
+}
+
+.blue-btn {
+  background-color: #3778c2;
+  color: #fff;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-scale {
+  animation: scale 2s infinite; /* Adjust the duration and animation iteration as needed */
+}
+
+.width-salim {
+  width: 80%;
+}

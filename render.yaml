@@ -1,0 +1,18 @@
+databases:
+  - name: microverse355173
+    databaseName: microverse355173
+    user: microverse355173
+
+services:
+  - type: web
+    name: Budget Monitor
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: microverse355173
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false

@@ -1,0 +1,16 @@
+<div id="<%= dom_id purchase %>" class="drop-shadow-md bg-white flex w-full p-3 rounded justify-between">
+<div>
+  <p>
+    <strong><%= purchase.name %></strong>
+  </p>
+
+  <p class="date-color text-xs">
+    <span><%= purchase.created_at.strftime('%d %b %Y') %></span>
+  </p>
+</div>
+  
+  <p class="amount-color">
+    $<%= purchase.amount %>
+  </p>
+
+</div>

@@ -1,0 +1,29 @@
+<div class="navigation py-6 px-3 blue-nav-white-text">
+  <ul class="flex justify-between items-center">
+    <li class="w-10">
+      <%= link_to image_tag('backarrow.png', alt: 'Back'), root_path, class: 'nav-link' %>
+    </li>
+    <h2><strong>LOGIN </strong></h2>
+    <li>
+      <%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }, class: "invisible" %>
+    </li>
+  </ul>
+</div>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'mt-10 flex flex-col' }) do |f| %>
+  <div class="field border-t-2 -t">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'w-full border-none', placeholder: 'Email' %>
+  </div>
+
+  <div class="field border-y-2 border-t-1 ">
+    <%= f.password_field :password, autocomplete: "current-password", class: 'w-full  border-none', placeholder: 'Password' %>
+  </div>
+
+  <div class="actions ms-4">
+    <%= f.submit "Log in", class: 'mt-6 p-3 px-5 green-btn rounded hover:bg-green-600' %>
+  </div>
+<% end %>
+
+<div class="ms-4">
+  <%= render "devise/shared/links" %>
+</div>
