@@ -24,11 +24,6 @@ RSpec.feature 'Category Show Page', type: :feature do
     expect(page).to have_current_path(categories_path)
   end
 
-  scenario 'Click on Edit category' do
-    find('[data-testid="edit-category-button"]').click
-    expect(page).to have_current_path(edit_category_path(category))
-  end
-
   scenario 'Click on New purchase' do
     find('[data-testid="new-purchase-button"]').click
     expect(page).to have_current_path(new_category_purchase_path(category))

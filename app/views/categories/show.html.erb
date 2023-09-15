@@ -21,17 +21,13 @@
     </section>
   </div>
 
-  <section class="flex flex-col space-y-2 p-5">
-      <a href="<%= new_category_purchase_path(@category) %>" class="">
-        <button data-testid="new-purchase-button" class="drop-shadow-md p-3 w-full green-btn text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600">
-          New purchase
+  <section class="text-center mt-4">
+    <%= link_to new_category_purchase_path(@category) do %>
+      <div class="w-full green-btn flex">
+        <button data-testid="new-purchase-button" class="p-2 py-4 m-4 text-lg w-full border-2 green-btn rounded hover:bg-green-600 focus:outline-none focus:bg-green-600">
+          <strong>Add a new transaction</strong>
         </button>
-      </a>
-
-      <%= link_to edit_category_path(@category) do %>
-        <button data-testid="edit-category-button" class="drop-shadow-md p-3 orange-btn bg-white w-full rounded hover:bg-orange-600">Edit category</button>
-      <% end %>
-
-      <%= button_to "Delete category", @category, method: :delete, data: { confirm: 'Are you sure?' }, class: "drop-shadow-md w-full p-3 red-btn text-white rounded-md hover:bg-red-600 focus:outline-none focus:bg-red-600" %>
-    </section>
+      </div>
+    <% end %>
+  </section>
   </div>
