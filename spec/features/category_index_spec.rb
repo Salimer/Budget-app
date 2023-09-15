@@ -12,7 +12,12 @@ RSpec.feature 'Category Index Page', type: :feature, js: true do
   before(:each) { visit categories_path }
 
   scenario 'Visiting the index path' do
-    expect(page).to have_content('Categories')
+    expect(page).to have_content('Category')
+    expect(page).to have_selector('.category-item')
+
+    within('.category-item', match: :first) do
+      expect(page).to have_text('Total:')
+    end
   end
 
   scenario 'Click Add a New Category' do
