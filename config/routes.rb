@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :categories do
     resources :purchases, only: [:new, :show]
   end
-  resources :purchases, except: [:new, :show]
+  resources :purchases, except: [:new, :show, :index]
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
