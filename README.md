@@ -16,9 +16,6 @@
 ![BudgetThumbnail (1)](https://github.com/Salimer/Budget-app/assets/52242629/a45ff6b6-db3c-4626-8d26-06af201530d9)
 
 
-<img width="374" alt="erd_diagram" src="https://github.com/Salimer/Budget-app/assets/52242629/83b71cc6-3f17-4916-add6-630c948f7078">
-
-
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -50,6 +47,8 @@
 # 📖 Budget app <a name="about-project"></a>
 
 **Budget app** is a mobile web application where you can manage your budget; you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+
+<img width="374" alt="erd_diagram" src="https://github.com/Salimer/Budget-app/assets/52242629/83b71cc6-3f17-4916-add6-630c948f7078">
 
 ## 🛠 Built With <a name="built-with"></a>
 
